@@ -55,7 +55,7 @@ for b_obj in input_bids:
         output.append([])
         continue
 
-    # get the larget bids for each unit
+    # get the larget bid for each unit
     largest_bids = {}
     for b in valid_bids:
         if not b['unit'] in largest_bids:
