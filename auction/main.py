@@ -71,5 +71,4 @@ for b_obj in input_bids:
     output.append(largest_bids_list)
 
 # write output.json to stdout
-
 stdout.write(json.dumps(output))
