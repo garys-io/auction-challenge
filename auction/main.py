@@ -3,7 +3,7 @@ from sys import stdin, stdout
 
 
 # read config
-with open('/auction/config.json') as f:
+with open('config.json') as f:
     config = json.load(f)
 
 # convert list into dic and set for faster lookup later
@@ -21,7 +21,8 @@ for bidder in config['bidders']:
     config_bidders[name] = bidder['adjustment']
 
 # read input bids from stdin
-input_bids = json.loads(stdin.read())
+with open('input.json') as f:
+    input_bids = json.load(f)
 
 output = []
 for b_obj in input_bids:
